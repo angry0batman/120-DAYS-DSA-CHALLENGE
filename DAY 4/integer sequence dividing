@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int isd(int &n){
+    n=n%4;
+    if(n==0 || n==3){
+        return 0;
+    }
+    return 1;
+}
+
+int main() {
+    int n;
+    cin>>n;
+    cout<<isd(n);
+    }
+
