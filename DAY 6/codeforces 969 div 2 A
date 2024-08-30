@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+int odds(int l, int r) {
+    int odd= 0;
+    for (int i = l; i <= r; ++i) {
+        if (i % 2 != 0) {
+            ++odd;
+        }
+    }
+    return odd;
+}
+
+
+int max_operations(int l, int r) {
+    int odd_count = odds(l, r);
+    return odd_count / 2; 
+}
+
+int main() {
+    int test;
+    cin >> test;
+    for (int i = 0; i < test; ++i) {
+        int l, r;
+        cin >> l >> r;
+        cout << max_operations(l, r) << endl;
+    }
+    return 0;
+}
